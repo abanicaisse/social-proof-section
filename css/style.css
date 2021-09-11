@@ -67,7 +67,7 @@ main {
     justify-content: center;
     gap: .5rem;
     border-radius: .3rem;
-    padding: 1rem 0;
+    padding: .5rem 0;
 }
 
 .presentation .presentation__rating > .rates > p {
@@ -89,7 +89,7 @@ main {
     background-color: var(--clr-red-190);
     color: var(--clr-red-5);
     border-radius: .3rem;
-    padding: 2rem;
+    padding: 1rem 2rem;
 }
 
 .profiles .profiles__cards > .header {
@@ -111,4 +111,67 @@ main {
 .profiles .profiles__cards > p {
     color: var(--white);
     font-size: 1rem;
+}
+
+
+@media screen and (max-width: 300px) {
+    .profiles .profiles__cards > .header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        background-image: url('/images/bg-pattern-top-desktop.svg'), url('/images/bg-pattern-bottom-desktop.svg');
+        background-position: top, bottom;
+    }
+
+    main {
+        width: 85%;
+        max-width: 81rem;
+    }
+
+    .presentation {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10rem;
+        align-items: center;
+        /* justify-content: space-between; */
+        text-align: left;
+    }
+    
+    .presentation .presentation__intro > h1 {
+        font-size: 3rem;
+    }
+    
+.presentation .presentation__rating > .rates {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-content:space-around ;
+        padding: .5rem 1rem;
+    }
+
+    .presentation .presentation__rating > div:nth-child(1) {
+        margin-right: 10rem;
+    }
+    
+    .presentation .presentation__rating > div:nth-child(2) {
+        margin-right: 5rem;
+    }
+
+    .profiles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profiles .profiles__cards:nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .profiles .profiles__cards:nth-child(3) {
+        margin-top: 4rem;
+    }
+
 }
