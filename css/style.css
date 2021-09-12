@@ -31,7 +31,7 @@ body {
 
 main {
     width: 90%;
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 .presentation {
@@ -113,6 +113,15 @@ main {
     font-size: 1rem;
 }
 
+footer {
+    padding-bottom: 1rem;
+}
+
+footer > div > a {
+    color: var(--clr-red-190);
+    font-weight: 700;
+}
+
 
 @media screen and (max-width: 300px) {
     .profiles .profiles__cards > .header {
@@ -135,7 +144,7 @@ main {
     .presentation {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 10rem;
+        column-gap: 8rem;
         align-items: center;
         /* justify-content: space-between; */
         text-align: left;
@@ -145,12 +154,13 @@ main {
         font-size: 3rem;
     }
     
-.presentation .presentation__rating > .rates {
+    .presentation .presentation__rating > .rates {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 2fr;
         justify-content:space-around ;
         padding: .5rem 1rem;
+        margin-bottom: 1rem;
     }
 
     .presentation .presentation__rating > div:nth-child(1) {
